@@ -1,0 +1,124 @@
+.course-page {
+  padding-top: 80px;
+}
+
+/* HERO */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0b0f1a, #11162a);
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero-sub {
+  margin: 16px 0 30px;
+  font-size: 18px;
+}
+
+.chips {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.chips span {
+  background: var(--bg-card);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* LEARN GRID */
+.learn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.learn-grid h4 {
+  margin-bottom: 10px;
+}
+
+.learn-grid ul {
+  padding-left: 18px;
+}
+
+/* PROJECT CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.features span {
+  background: var(--bg-card);
+  padding: 10px 16px;
+  border-radius: 20px;
+}
+
+/* FINAL CTA */
+.cta {
+  padding: 100px 10%;
+  text-align: center;
+  background: linear-gradient(135deg, #11162a, #0b0f1a);
+}
+
+.primary.big {
+  font-size: 18px;
+  padding: 16px 36px;
+}
+
+/* FLOATING CTA */
+.floating-cta {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 900px;
+  background: #11162a;
+  padding: 14px 20px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+.cta-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

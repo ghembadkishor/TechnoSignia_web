@@ -1,4 +1,6 @@
+import { useState, useEffect } from "react";
 import { FaLinkedinIn, FaInstagram, FaEnvelope } from "react-icons/fa";
+import Footer from "../../components/common/Footer";
 import { motion } from "framer-motion";
 import { aboutData } from "../../data/aboutData";
 import { reviewsData } from "../../data/reviewsData";
@@ -7,9 +9,19 @@ import { useNavigate } from "react-router-dom";
 import "./about.css";
 const About = ({ onOpenModal }) => {
 
-  const navigate = useNavigate();   // ✅ MUST be inside component
-
+  const [preview, setPreview] = useState(null);
+  const navigate = useNavigate();   // inside component
   const { hero, whoWeAre, founder, timeline, whyUs, stats } = aboutData;
+  useEffect(() => {
+  if (!preview) return;
+
+  const timer = setTimeout(() => {
+    setPreview(null);
+  }, 5000);
+
+  return () => clearTimeout(timer);
+}, [preview]);
+
 
   return (
     <div className="about-page">
@@ -89,13 +101,65 @@ const About = ({ onOpenModal }) => {
 
       </motion.section>
 
+{/* ================= WHO WE ARE PREMIUM ================= */}
+<motion.section
+  className="about-section who"
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+
+  <div className="who-grid">
+
+    {/* LEFT IMAGE */}
+    <motion.img
+      src="/hero/who.jpg"
+      alt="Institute Image"
+      className="who-img"
+      initial={{ opacity: 0, x: -80, scale: 0.85 }}
+      whileInView={{ opacity: 1, x: 0, scale: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+    />
+
+    {/* RIGHT CONTENT */}
+    <motion.div
+      className="who-content"
+      initial={{ opacity: 0, x: 60 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.9 }}
+      viewport={{ once: true }}
+    >
+
+      <h2 className="who-title">Who We Are</h2>
+
+      <p className="who-text">
+        We don’t just teach theory. We build real engineers.
+        Our students work on live projects, internships,
+        and placement-focused training from day one.
+      </p>
+
+      <div className="who-features">
+
+        <div className="who-card">💻 Live Coding Training</div>
+        <div className="who-card">🎯 Placement Focused</div>
+        <div className="who-card">🧠 Industry Mentors</div>
+        <div className="who-card">🚀 Real Projects</div>
+
+      </div>
+
+    </motion.div>
+
+  </div>
+
+  {/* background glow */}
+  <div className="who-glow g1"></div>
+  <div className="who-glow g2"></div>
+
+</motion.section>
 
 
-      {/* WHO WE ARE */}
-      <section className="about-section">
-        <h2>Who We Are</h2>
-        <p>{whoWeAre.text}</p>
-      </section>
 
       {/* ================= FOUNDER ================= */}
       <section className="about-section founder">
@@ -183,21 +247,81 @@ const About = ({ onOpenModal }) => {
           </motion.div>
         </div>
       </section>
+{/* ================= GROWTH JOURNEY ULTRA PREMIUM ================= */}
+<section className="about-section timeline-pro">
 
-      {/* TIMELINE */}
-      <section className="about-section">
-        <h2>Our Growth Journey</h2>
-        <div className="timeline">
-          {timeline.map((item, i) => (
-            <div key={i} className="timeline-item">
-              <span className="year">{item.year}</span>
-              <p>{item.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+  <h2 className="timeline-title">Our Growth Journey 🚀</h2>
+  <p className="timeline-sub">
+    From a small classroom to Maharashtra’s fastest growing IT training institute
+  </p>
 
-      {/* WHY US */}
+  <div className="timeline-center-line"></div>
+  {/* ================= IMAGE PREVIEW MODAL ================= */}
+{preview && (
+  <div className="preview-overlay">
+
+    <motion.div
+      className="preview-box"
+      initial={{ scale: 0.7, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
+
+      <img src={`/timeline/${preview.year}.jpg`} />
+
+      <h3>{preview.year} – {preview.title}</h3>
+      <p>{preview.text}</p>
+
+      <button
+        className="preview-close"
+        onClick={() => setPreview(null)}
+      >
+        ✕
+      </button>
+
+    </motion.div>
+  </div>
+)}
+
+
+  {timeline.map((item, i) => (
+    <motion.div
+      key={i}
+      className={`timeline-pro-row ${i % 2 === 0 ? "left" : "right"}`}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+    >
+
+      {/* YEAR BADGE */}
+      <div className="timeline-year">{item.year}</div>
+
+      {/* CARD */}
+      <div className="timeline-pro-card">
+
+        <img
+         src={`/timeline/${item.year}.jpg`}
+         alt={item.year}
+         className="timeline-pro-img"
+         onClick={() => setPreview(item)}
+        />
+
+
+        <h3 className="timeline-card-title">{item.title}</h3>
+
+        <p className="timeline-card-text">
+          {item.text}
+        </p>
+
+      </div>
+
+    </motion.div>
+  ))}
+</section>
+
+
+   {/* WHY US */}
       <section className="about-section alt">
         <h2>Why Technosignia</h2>
         <div className="why-grid">
@@ -236,8 +360,7 @@ const About = ({ onOpenModal }) => {
     </div>
   );
 };
-
-/* ================= REVIEW CARD ================= */
+{/* ================= REVIEW CARD ================= */}
 
 const ReviewCard = ({ name, text }) => {
   return (

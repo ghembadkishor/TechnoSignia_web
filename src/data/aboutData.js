@@ -28,7 +28,9 @@ Worked with global product-based companies including Visa, MasterCard, Avaya, Te
     { year: "2022", text: "Introduced internships & placements up to ₹6 LPA." },
     { year: "2023", text: "Incorporated as Pvt. Ltd. & ₹20 LPA highest package." },
     { year: "2024", text: "10,000+ placements & Lokmat Award." },
-    { year: "2025", text: "Advanced programs & journey to India’s No.1 institute." }
+    { year: "2025", text: "Advanced programs & journey to India’s No.1 institute." },
+    { year: "2026", title: "Next Level Expansion", text: "Launching pan-India centers and advanced AI programs with record placements."}
+
   ],
 
   whyUs: [

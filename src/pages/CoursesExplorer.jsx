@@ -4,7 +4,7 @@ import { courses } from "../data/courses";
 import { useNavigate } from "react-router-dom";
 
 const CoursesExplorer = () => {
-  const navigate = useNavigate(); // ✅ HOOK INSIDE COMPONENT
+  const navigate = useNavigate(); // INSIDE COMPONENT
 
   return (
     <main className="content">

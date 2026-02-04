@@ -10,7 +10,6 @@ import Home from "./pages/Home/Home";
 import CoursesExplorer from "./pages/CoursesExplorer";
 import JavaFullStack from "./pages/JavaFullStack";
 import PlacementJourney from "./pages/PlacementJourney";
-
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   

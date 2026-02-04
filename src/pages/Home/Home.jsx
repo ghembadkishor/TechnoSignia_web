@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import heroVideo from "../../assets/videos/hero.mp4";
 import { useNavigate } from "react-router-dom";
 import { getHomeData } from "../../services/homeService";
 import "./home.css";
@@ -26,7 +25,7 @@ const Home = () => {
           loop
           playsInline
         >
-          <source src={heroVideo} type="video/mp4" />
+          <source src={"/videos/hero.mp4"} type="video/mp4" />
         </video>
 
         <div className="hero-overlay" />

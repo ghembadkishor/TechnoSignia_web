@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { FaLinkedinIn, FaInstagram, FaEnvelope } from "react-icons/fa";
-import Footer from "../../components/common/Footer";
 import { motion } from "framer-motion";
 import { aboutData } from "../../data/aboutData";
 import { reviewsData } from "../../data/reviewsData";
@@ -86,7 +85,7 @@ const About = ({ onOpenModal }) => {
         <div className="hero-right">
 
           <motion.img
-            src="/hero/institute.jpg"
+            src="/images/institute.jpg"
             alt="Institute"
             className="hero-img"
             initial={{ opacity: 0, x: 80, scale: 0.9 }}
@@ -114,7 +113,7 @@ const About = ({ onOpenModal }) => {
 
     {/* LEFT IMAGE */}
     <motion.img
-      src="/hero/who.jpg"
+      src="/images/who.jpg"
       alt="Institute Image"
       className="who-img"
       initial={{ opacity: 0, x: -80, scale: 0.85 }}
@@ -175,7 +174,7 @@ const About = ({ onOpenModal }) => {
   viewport={{ once: false }}
 >
   <img
-    src="/founder/mallinath-paratnale.jpg"
+    src="/images/mallinath-paratnale.jpg"
     alt="Mr. Mallinath Maruti Paratnale"
   />
 
@@ -267,7 +266,7 @@ const About = ({ onOpenModal }) => {
       transition={{ duration: 0.3 }}
     >
 
-      <img src={`/timeline/${preview.year}.jpg`} />
+      <img src={`/images/${preview.year}.jpg`} />
 
       <h3>{preview.year} – {preview.title}</h3>
       <p>{preview.text}</p>
@@ -301,7 +300,7 @@ const About = ({ onOpenModal }) => {
       <div className="timeline-pro-card">
 
         <img
-         src={`/timeline/${item.year}.jpg`}
+         src={`/images/${item.year}.jpg`}
          alt={item.year}
          className="timeline-pro-img"
          onClick={() => setPreview(item)}

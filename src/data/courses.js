@@ -6,7 +6,7 @@ export const courses = [
     duration: "6 Months",
     level: "Beginner to Advanced",
     badge: "Most Popular",
-    image: "/src/assets/courses/java-fullstack.jpg"
+    image: "/images/java-fullstack.jpg"
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const courses = [
     duration: "6 Months",
     level: "Intermediate",
     badge: "High Demand",
-    image: "/src/assets/courses/mern-stack.jpg"
+    image: "/images/mern-stack.jpg"
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const courses = [
     duration: "4 Months",
     level: "Beginner Friendly",
     badge: "Job Oriented",
-    image: "/src/assets/courses/manual-testing.jpg"
+    image: "/images/manual-testing.jpg"
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const courses = [
     duration: "4 Months",
     level: "Intermediate",
     badge: "In Demand",
-    image: "/src/assets/courses/automation-testing.jpg"
+    image: "/images/automation-testing.jpg"
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ export const courses = [
     duration: "5 Months",
     level: "Beginner",
     badge: "Trending",
-    image: "/src/assets/courses/python-fullstack.jpg"
+    image: "/images/python-fullstack.jpg"
   },
   {
     id: 6,
@@ -51,6 +51,6 @@ export const courses = [
     duration: "6 Months",
     level: "Intermediate",
     badge: "Trending",
-    image: "/src/assets/courses/cyber-security.jpg"
+    image: "/images/cyber-security.jpg"
   }
 ];

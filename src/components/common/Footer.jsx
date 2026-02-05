@@ -3,6 +3,7 @@ import "./footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
+      <div className="container">
       <div className="footer-inner">
 
         {/* BRAND */}
@@ -54,6 +55,7 @@ const Footer = () => {
       {/* BOTTOM */}
       <div className="footer-bottom">
         © {new Date().getFullYear()} TechnoSignia. All Rights Reserved.
+      </div>
       </div>
     </footer>
   );

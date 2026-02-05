@@ -113,7 +113,7 @@
 /* CTA */
 .pj-btn {
   margin-top: 36px;
-  padding: 14px 38px;
+  padding: clamp(10px, 2vw, 14px) clamp(18px, 4vw, 32px);
   border-radius: 999px;
   border: none;
   background: linear-gradient(135deg, #22d3ee, #00ffcc);

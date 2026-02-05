@@ -24,6 +24,7 @@ const About = ({ onOpenModal }) => {
 
   return (
     <div className="about-page">
+      <div className="container">
 
       {/* ================= HERO ================= */}
       <motion.section
@@ -97,8 +98,10 @@ const About = ({ onOpenModal }) => {
           <div className="glow glow1"></div>
           <div className="glow glow2"></div>
         </div>
+        
 
       </motion.section>
+      </div>
 
 {/* ================= WHO WE ARE PREMIUM ================= */}
 <motion.section
@@ -108,6 +111,7 @@ const About = ({ onOpenModal }) => {
   transition={{ duration: 0.6 }}
   viewport={{ once: true }}
 >
+  <div className="container">
 
   <div className="who-grid">
 
@@ -155,13 +159,14 @@ const About = ({ onOpenModal }) => {
   {/* background glow */}
   <div className="who-glow g1"></div>
   <div className="who-glow g2"></div>
-
+</div>
 </motion.section>
 
 
 
       {/* ================= FOUNDER ================= */}
       <section className="about-section founder">
+        <div className="container">
         <h2>Founder & Vision</h2>
 
         <div className="founder-grid">
@@ -245,9 +250,11 @@ const About = ({ onOpenModal }) => {
             ))}
           </motion.div>
         </div>
+        </div>
       </section>
 {/* ================= GROWTH JOURNEY ULTRA PREMIUM ================= */}
 <section className="about-section timeline-pro">
+  <div className="container">
 
   <h2 className="timeline-title">Our Growth Journey 🚀</h2>
   <p className="timeline-sub">
@@ -317,31 +324,37 @@ const About = ({ onOpenModal }) => {
 
     </motion.div>
   ))}
+  </div>
 </section>
 
 
    {/* WHY US */}
       <section className="about-section alt">
+        <div className="container">
         <h2>Why Technosignia</h2>
         <div className="why-grid">
           {whyUs.map((item, i) => (
             <div key={i} className="why-card">{item}</div>
           ))}
         </div>
+        </div>
       </section>
 
       {/* STATS */}
       <section className="about-section stats">
+        <div className="container">
         {stats.map((s, i) => (
           <div key={i} className="stat">
             <h3>{s.value}</h3>
             <p>{s.label}</p>
           </div>
         ))}
+        </div>
       </section>
 
       {/* ================= REVIEWS (FINAL) ================= */}
       <section className="about-section reviews">
+        <div className="container">
         <h2>Student Reviews</h2>
         <p className="review-sub">
           ⭐⭐⭐⭐⭐ <strong>EXCELLENT</strong> — Based on {reviewsData.totalReviews}+ Google Reviews
@@ -353,6 +366,7 @@ const About = ({ onOpenModal }) => {
               <ReviewCard key={i} name={r.name} text={r.text} />
             ))}
           </div>
+        </div>
         </div>
       </section>
 
@@ -374,6 +388,7 @@ const ReviewCard = ({ name, text }) => {
       transition={{ duration: 0.4 }}
       viewport={{ once: true }}
     >
+       <div className="container">
       <div className="review-header">
         <div className="avatar">{name[0]}</div>
         <div>
@@ -386,6 +401,7 @@ const ReviewCard = ({ name, text }) => {
 
       <p className="review-text">“{text}”</p>
       <div className="review-footer">⭐⭐⭐⭐⭐</div>
+      </div>
     </motion.div>
   );
 };

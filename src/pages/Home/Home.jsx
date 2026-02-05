@@ -18,6 +18,7 @@ const Home = () => {
   return (
     <div className="home-root">
       <section className="hero">
+        <div className="container">
         <video
           className="hero-video"
           autoPlay
@@ -70,6 +71,7 @@ const Home = () => {
                 <Counter label="Industry Experts" value={data.counters.industryExperts} />
             </div>
 
+        </div>
         </div>
       </section>
     </div>

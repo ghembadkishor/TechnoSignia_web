@@ -1,12 +1,11 @@
 import { NavLink } from "react-router-dom";
 import "../../styles/layout.css";
-import logo from "../../assets/logo/technosignia-logo.png";
 
 const Header = ({ onOpenModal }) => {
   return (
     <header className="header">
       <div className="brand-center">
-        <img src={logo} alt="TechnoSignia Logo" />
+        <img src="/images/technosignia-logo.png" alt="TechnoSignia Logo" />
         <div className="brand-text">
           <span className="techno">Techno</span>
           <span className="signia">Signia</span>

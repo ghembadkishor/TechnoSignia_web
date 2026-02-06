@@ -53,7 +53,7 @@ const PlacementJourney = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
         >
-          <span>2899+ Students Placed</span>
+          <span>10,000+ Students Placed</span>
           <span>12+ Industry Experts</span>
           <span>120+ Hiring Partners</span>
         </motion.div>

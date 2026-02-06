@@ -65,7 +65,7 @@ const Home = () => {
 
           {/* COUNTERS INSIDE HERO */}
              <div className="hero-counters">
-                <Counter label="Placement Success Rate" value={data.counters.placementRate} suffix="%" />
+                <Counter label="Placement Success Rate" value={data?.counters?.placementRate ?? 0}suffix="%"/>
                 <Counter label="Students Placed" value={data.counters.studentsPlaced} />
                 <Counter label="Hiring Partners" value={data.counters.hiringPartners} />
                 <Counter label="Industry Experts" value={data.counters.industryExperts} />

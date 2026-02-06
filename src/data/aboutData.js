@@ -23,7 +23,7 @@ Worked with global product-based companies including Visa, MasterCard, Avaya, Te
   },
 
   timeline: [
-    { year: "2020", text: "Started with diploma & non-IT students." },
+    { year: "2020", title: "Started with diploma & non-IT students." },
     { year: "2021", text: "Expanded to Engineering & MCA students." },
     { year: "2022", text: "Introduced internships & placements up to ₹6 LPA." },
     { year: "2023", text: "Incorporated as Pvt. Ltd. & ₹20 LPA highest package." },
